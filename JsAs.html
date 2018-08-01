@@ -50,6 +50,11 @@
 					<h1>Assignments</h1>
 		  <p>by Smitha</p> 
 				</div>
+        <style>
+          .jumbotron{
+            padding: 0.5em 0.6em;
+          }
+        </style>
 		  
 		
 
@@ -80,32 +85,101 @@
     </div>
     <div id="collapse1" class="panel-collapse collapse">
       <ul class="list-group">
-        <li class="list-group-item">One</li>
-        <li class="list-group-item"><a href="reverse.html">Two</a></li>
+        <li class="list-group-item"><a href="reverse.html">One</li>
+        <li class="list-group-item">Two</a></li>
         <li class="list-group-item">Three</li>
+        <li class="list-group-item">Four</li>
+        <li class="list-group-item">Five</li>
+        <li class="list-group-item">Six</li>
+        <li class="list-group-item">Seven</li>
+        <li class="list-group-item">Eight</li>
+        <li class="list-group-item">Night</li>
       </ul>
-      <div class="panel-footer">Footer</div>
-    </div>
+<!--       <div class="panel-footer">Footer</div>
+ -->    </div>
   </div>
 </div>
 	</div>
 	<center>
 	<div>
 		<div class="col-sm-8 text-left"> 
-      <h1>Welcome</h1>
-      <p>sdfhauihf sfhaufhoaf 
-      	sjdjkafh sdhfla 'kasdhfkadf sdkfa'
-      </p>
+
+      <!-- Assignment 1 -->
+
+      <div class="container">
+  <h2>Simple Collapsible</h2>
+  <p>Click on the button to toggle between showing and hiding content.</p>
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Simple collapsible</button>
+  <div id="demo" class="collapse">
+    <div class="container">
+    <script>
+  function reverse1()
+{
+var rev,num,b,temp=0;
+
+num=Number(document.getElementById("input1").value);
+
+no=num;
+while(no>0)
+{
+rev=no%10;
+no=parseInt(no/10);
+temp=temp*10+rev;
+}
+document.getElementById("id1").innerHTML=temp;
+} 
+</script>
+</div>
+  
+
+
+  
+    <div class="jumbotron">
+
+      <h5>Number  </h5><input id="input1">
+<button class="btn btn-primary btn-lg" onclick="reverse1()">Check</button></br></br>
+<p id="id1"></p>
+</div>
+  </div>
+</div>
+
 	</div>
-	
-	<div>
+
+  <!-- Assignment 2 -->
+<div class="col-sm-8 text-left"> 
+      <div class="container">
+  <h2>Simple Collapsible</h2>
+  <p>Click on the button to toggle between showing and hiding content.</p>
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Simple collapsible</button>
+  <div id="demo" class="collapse">
+    <div class="container">
+
+      <div>
+        <h1>First Non Repeating Element in an Array</h1>
+<div>
+<p>Enter the string:</p>
+<input type="text" id="text">
+<button type="button" id="btn" onclick="nonRep();">Submit</button>
+</div>
+<div id="output"></div>
+<script type="text/javascript" src="nonrepet.js"></script>
+
+
+      </div>
+
+
+
+
+
+	<!-- Navi Button -->
+	<!-- <div>
    	<a href="#" class="btn btn-success btn-lg">
       <span class="glyphicon glyphicon-chevron-left"></span> 
     </a>
     <a href="#" class="btn btn-success btn-lg">
       <span class="glyphicon glyphicon-chevron-right"></span> 
     </a> 
-  </div>
+  </div> -->
   </center>
 </div>
  

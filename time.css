@@ -1,0 +1,12 @@
+body{
+	background-color: lightblue;
+	color:darkgreen;
+	font-size:30;
+	display:flex;
+	align-items: center;
+    justify-content: center;
+}
+#res{
+ font-style: italic;
+ 
+}
