@@ -1,62 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>JavaScript Assignment</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <title>JavaScript Assignment</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
- <style>
-    /* Remove the navbar's default margin-bottom and rounded borders */ 
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-    }
-    
-    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 450px}
-    
-    /* Set gray background color and 100% height */
+  <style>
+
+  /* Set black background color, white text and some padding */
+  footer {
+    background-color: #555;
+    color: white;
+    padding: 15px;
+  }
+
+  /* On small screens, set height to 'auto' for sidenav and grid */
+  @media screen and (max-width: 767px) {
     .sidenav {
-      padding-top: 20px;
-      background-color: #f1f1f1;
-      height: 100%;
-    }
-    
-    /* Set black background color, white text and some padding */
-    footer {
-      background-color: #555;
-      color: white;
+      height: auto;
       padding: 15px;
     }
-    
-    /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
-      .sidenav {
-        height: auto;
-        padding: 15px;
-      }
-      .row.content {height:auto;} 
-    }
-  </style>
+    .row.content {height:auto;} 
+  }
+</style>
 
 
 
 
 </head>
 <body>
-			<div class="container">
-				<div class="jumbotron">
-					<h1>Assignments</h1>
-		  <p>by Smitha</p> 
-				</div>
-        <style>
-          .jumbotron{
-            padding: 0.5em 0.6em;
-          }
-        </style>
-		  
-		
+  <div class="container">
+    <div class="jumbotron">
+     <h1>Assignments</h1>
+     <p>by Naresh Kumar</p> 
+   </div>
+   <style>
+   .jumbotron{
+    padding: 0.5em 0.6em;
+  }
+</style>
+
+
 
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
@@ -72,119 +57,120 @@
   </div>
 </nav>
 
-<div class="container-fluid text-center">    
-  <div class="row content">
-    <div class="col-sm-2 sidenav">
 
-    	<div class="panel-group">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" href="#collapse1">Assignment lists</a>
-      </h4>
-    </div>
-    <div id="collapse1" class="panel-collapse collapse">
-      <ul class="list-group">
-        <li class="list-group-item"><a href="reverse.html">One</li>
-        <li class="list-group-item">Two</a></li>
-        <li class="list-group-item">Three</li>
-        <li class="list-group-item">Four</li>
-        <li class="list-group-item">Five</li>
-        <li class="list-group-item">Six</li>
-        <li class="list-group-item">Seven</li>
-        <li class="list-group-item">Eight</li>
-        <li class="list-group-item">Night</li>
-      </ul>
-<!--       <div class="panel-footer">Footer</div>
- -->    </div>
-  </div>
-</div>
-	</div>
-	<center>
-	<div>
-		<div class="col-sm-8 text-left"> 
+<!-- Assignment 1 -->
 
-      <!-- Assignment 1 -->
-
-      <div class="container">
-  <h2>Simple Collapsible</h2>
-  <p>Click on the button to toggle between showing and hiding content.</p>
-  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Simple collapsible</button>
-  <div id="demo" class="collapse">
-    <div class="container">
+<h2>Simple Collapsible</h2>
+<p>Click on the button to toggle between showing and hiding content.</p>
+<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Simple collapsible</button>
+<div id="demo" class="collapse">
+  <div class="container">
     <script>
-  function reverse1()
-{
-var rev,num,b,temp=0;
+      function reverse1()
+      {
+        var rev,num,b,temp=0;
 
-num=Number(document.getElementById("input1").value);
+        num=Number(document.getElementById("input1").value);
 
-no=num;
-while(no>0)
-{
-rev=no%10;
-no=parseInt(no/10);
-temp=temp*10+rev;
-}
-document.getElementById("id1").innerHTML=temp;
-} 
-</script>
-</div>
-  
+        no=num;
+        while(no>0)
+        {
+          rev=no%10;
+          no=parseInt(no/10);
+          temp=temp*10+rev;
+        }
+        document.getElementById("id1").innerHTML=temp;
+      } 
+    </script>
+  </div>
 
 
-  
-    <div class="jumbotron">
 
+
+  <div class="jumbotron">
+    <P>
       <h5>Number  </h5><input id="input1">
-<button class="btn btn-primary btn-lg" onclick="reverse1()">Check</button></br></br>
-<p id="id1"></p>
-</div>
+      <button class="btn btn-primary btn-lg" onclick="reverse1()">Check</button></br></br></P>
+      <p id="id1"></p>
+    </div>
   </div>
 </div>
 
-	</div>
+</div>
 
-  <!-- Assignment 2 -->
-<div class="col-sm-8 text-left"> 
-      <div class="container">
+
+
+<!-- Assignment 2 -->
+<div class="container">
   <h2>Simple Collapsible</h2>
   <p>Click on the button to toggle between showing and hiding content.</p>
-  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Simple collapsible</button>
-  <div id="demo" class="collapse">
-    <div class="container">
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo1">Simple collapsible</button>
+  <div id="demo1" class="collapse">
 
-      <div>
-        <h1>First Non Repeating Element in an Array</h1>
-<div>
-<p>Enter the string:</p>
-<input type="text" id="text">
-<button type="button" id="btn" onclick="nonRep();">Submit</button>
+    <!-- <div id="output"></div> -->
+    <!-- <script type="text/javascript" src="nonrepet.js"></script> -->
+
+    <script>
+      function nonRep(){
+        var output = document.getElementById("output");
+        var text = document.getElementById("text").value;
+
+        var s = text.split("");
+        var counter = 0;
+        var result = '';
+
+        for(var i = 0; i < s.length; i++){
+         counter = 0;
+
+         for(var j = 0; j < s.length; j++){
+          if(s[i] === s[j]){
+            counter += 1;
+          }
+        }
+        if(counter < 2){
+          result =  s[i];
+          break;
+        }
+      }
+      output.innerHTML = result;
+    }     
+
+  </script>
+
+  <div class="jumbotron">
+    <p>Enter the string:</p>
+    <P><input type="text" id="text">
+      <button class="btn btn-primary btn-lg" type="button" id="btn" onclick="nonRep()">Submit</button>
+      <P id="output"></P>
+    </P>
+  </div>
 </div>
-<div id="output"></div>
-<script type="text/javascript" src="nonrepet.js"></script>
+
+</div>
 
 
+<!-- Assignment 3 -->
+
+<div class="container">
+  <h2>Simple Collapsible</h2>
+  <p>Click on the button to toggle between showing and hiding content.</p>
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo2">Simple collapsible</button>
+  <div id="demo2" class="collapse">
+
+    <div class="jumbotron">
+      <p><audio controls>
+        <source src="horse.ogg" type="audio/ogg">
+          <source src="horse.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio></p>
+        </div>
       </div>
-
-
-
-
-
-	<!-- Navi Button -->
-	<!-- <div>
-   	<a href="#" class="btn btn-success btn-lg">
-      <span class="glyphicon glyphicon-chevron-left"></span> 
-    </a>
-    <a href="#" class="btn btn-success btn-lg">
-      <span class="glyphicon glyphicon-chevron-right"></span> 
-    </a> 
-  </div> -->
-  </center>
+    </div>
+  </div>
 </div>
- 
 
 
 
-</body>
+
+  </body>
 </html>
