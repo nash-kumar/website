@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Assignments Page</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<!-- Full container -->
+
+<div class="container">
+<div class="jumbotron" id="top">
+	<h1>Assignments</h1>
+	<p>by Smitha & Naresh</p>
+	<style type="text/css">
+	#top{
+		height: 170px;
+		padding-top: 5px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+</style> 
+</div>
+
+<!-- Adding Navigation bar -->
+
+<nav class="navbar navbar-inverse">
+<div class="container-fluid">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="https://www.accionlabs.com/" target="_blank">AccionLabs</a>
+	</div>
+	<ul class="nav navbar-nav">
+		<li class="active"><a href="js.html ">JavaScript</a></li>
+		<li><a href="#">Angular</a></li>
+		<li><a href="#">NodeJS</a></li>
+	</ul>
+</div>
+</nav>
+
+<!-- Adding container to divide into two half -->
+<!-- Assignment one -->
+
+<div class="container">
+<div class="row">
+	<div class="col-lg-6">
+		<h2>Reversing  Number</h2>
+		<h4>Click to check reverse of a number?</h4>
+		<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Click to review</button>
+		<div id="demo" class="collapse">
+			<script>
+				function reverse1()
+				{
+					var rev,num,b,temp=0;
+
+					num=Number(document.getElementById("input1").value);
+
+					no=num;
+					while(no>0)
+					{
+						rev=no%10;
+						no=parseInt(no/10);
+						temp=temp*10+rev;
+					}
+					document.getElementById("id1").innerHTML=temp;
+				} 
+			</script>
+			<div class="jumbotron">
+				<p>Enter the Number:</p>
+				<p><input id="input1">
+					<button class="btn btn-primary btn-md" onclick="reverse1()">Check</button></p>
+					<p id="id1"></p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Assignment 2 -->
+
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<h2>Non-Repeating</h2>
+					<h4>Click to check the first non repeating character</h4>
+					<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo1">Click to review</button>
+					<div id="demo1" class="collapse">
+						<script>
+							function nonRep(){
+								var output = document.getElementById("output");
+								var text = document.getElementById("text").value;
+
+								var s = text.split("");
+								var counter = 0;
+								var result = '';
+
+								for(var i = 0; i < s.length; i++){
+									counter = 0;
+
+									for(var j = 0; j < s.length; j++){
+										if(s[i] === s[j]){
+											counter += 1;
+										}
+									}
+									if(counter < 2){
+										result =  s[i];
+										break;
+									}
+								}
+								output.innerHTML = result;
+							}     
+
+						</script>
+						<div class="jumbotron">
+							<p>Enter the string:</p>
+							<p>	<input type="text" id="text">
+								<button class="btn btn-primary btn-md" type="button" id="btn" onclick="nonRep()">Submit</button></p>
+								<p id="output"></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+<!-- Second Container not required -->
+
+<div class="row">
+	<!-- Assignment 3 -->
+	<div class="col-lg-6">
+		<h2>Audio player</h2>
+		<h4>Click here to hear a audio?</h4>
+		<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo2">click to review</button>
+		<div id="demo2" class="collapse">
+
+		<div class="jumbotron">
+			<p><audio controls >
+				<source src="ring.ogg" type="audio/ogg">
+					<source src="ring.mp3" type="audio/mpeg">
+						Your browser does not support the audio element.
+					</audio></p>
+				</div>
+			</div>
+	</div>
+
+
+	<!-- Assignment 4 -->
+	<div class="col-lg-6">
+	<h2>Day of a Week</h2>
+	<h4>Click to check the day of a week</h4>
+	<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo3">Click to review</button>
+	<div id="demo3" class="collapse">
+		<script>
+			function day(){
+				var d = new Date(document.getElementById("res").value);
+				var weekDays = new Array(7);
+				weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thurday", "Friday", "Saturday"];
+				var n = weekDays[d.getDay()];
+				document.getElementById("day1").innerHTML = n;
+			}
+		</script>
+
+
+		<div class="jumbotron">
+			<p>Date  <input type="date" name="date" id="res">
+				<button class="btn btn-primary btn-lg" id="btn" onclick="day()">Submit</button>
+				<p id="day1"></p>
+			</p>
+		</div>
+	</div>
+
+	</div>
+</div>
+
+<!-- Assigment 5 -->
+<div class="row">
+	<div class="col-lg-6">
+		<h2>Next Prime Number</h2>
+		<h4>Click here to find the prime numbers</h4>
+		<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo4">Click to review</button>
+		<div id="demo4" class="collapse">
+			<script>
+				function findprime()
+    {
+      
+      var inp=document.getElementById("inputnas").value;
+      document.getElementById("res1").innerHTML="prev prime is"+prevprime(inp);
+      document.getElementById("res2").innerHTML="next prime is"+nextprime(inp);
+      //document.getElementById("res1").innerHTML="hello aslo";
+      function prevprime(inp)
+      {
+        var temp=inp-1;
+        for(var i=2;i<=temp/2;i++){
+          if(temp%i==0){
+
+            temp--;
+          i=2;
+          }  
+          else{
+            continue;
+            j++;
+            }
+          }
+      return temp;
+      }
+      function nextprime(inp)
+      {
+        inp++;
+        for(var i=2;i<=inp/2;i++){
+          if(inp%i==0){
+            inp++;
+            i=2;
+          }else{
+            continue;//continuing the loop again
+          }
+      }
+      return inp;
+    }
+} 
+			</script>
+
+
+			<div class="jumbotron">
+				<p> NEXT PRIME NUMBER:</p>
+
+    <input id="inputnas"/>
+    <button class="btn btn-primary btn-sm" onclick="findprime()"> check </button>
+    <p id="res1">  </p>
+    <p id="res2"> </p>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+
+
+
+ <!-- Footer -->
+<hr>
+    <style type="text/css">
+      hr{
+      	margin-top: 70px;
+      	margin-bottom: 10px;
+        width: 700px;
+        border-top: 2px solid #f8f8f8;
+        border-bottom: 2px solid rgba(3,7,4,0.35)
+      }
+    </style>
+
+    <!-- Footer -->
+    <footer class="footer-copyright text-center py-3">
+     <!-- Copyright -->
+     <div class="footer-copyright text-center py-3">© 2018 Copyright:
+      <a href="https://www.linkedin.com/in/naresh-kumar-bn/"> Naresh Kumar</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+ 
+
+</div>
+</body>
+</html>
