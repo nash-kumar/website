@@ -178,7 +178,57 @@
      </p>
    </div>
  </div>
+<<<<<<< HEAD
  <p>
+=======
+</div>
+<!--Assignment-->
+<div class="container">
+   <h2>Boolean Calculator</h2>
+  <h4>Click here to calculate</h4>
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo6">Click to review</button>
+  <div id="demo6" class="collapse">
+    <script>
+      window.onload=function(){
+
+  var input1 = document.getElementById("input1");
+  var input2 = document.getElementById("input2");
+  var and = document.getElementById("and");
+  var or = document.getElementById("or");
+  var not = document.getElementById("not");
+  var output = document.getElementById("output");
+
+  and.addEventListener("click", function(){
+    var result = (input1.value & input2.value);
+    output.innerHTML = result;
+  });
+
+
+  or.addEventListener("click", function(){
+    var result = (input1.value | input2.value);
+    output.innerHTML = result;
+  });
+
+  not.addEventListener("click", function(){
+    var result = !(input1.value);
+    output.innerHTML = result;
+  });
+
+} 
+</script>
+ <div class="jumbotron">
+  <div id="calc-layout">  
+<h4>The Boolean Calculator</h4>
+<input type = "number" id="input1">
+<button id = "and">&&</button>
+<button id = "or">||</button>
+<button id = "not" onclick = "not()">!</button>
+<input type ="number" id="input2">
+<p id = "output"></p>
+</div>
+</div>
+<p>
+>>>>>>> b157e5d8a81bfffc149ca3db65f67834a862d3d9
   
  </p>
 
