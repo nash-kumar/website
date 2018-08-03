@@ -241,6 +241,56 @@
 	</div>
 </div>
 </div>
+<!-- Assigment 7 -->
+<div class="container">
+	<div class="row">
+		<div class="col-lg-6">
+			<h2>Balanced Parenthesis</h2>
+			<h4>Click here to check the balanced paranthesis</h4>
+			<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo7">Click to review</button>
+			<div id="demo7" class="collapse">
+				<script type="text/javascript">
+					function balance(){
+						var s=0,v=0,a;
+						var str=document.getElementById("str");
+						a = str.value;
+						for (var i=0;i<str.value.length;i++)
+						{
+							if(a.charAt(i) == "("){
+								++s;
+							}
+							else if(a.charAt(i) == ")"){
+								--v
+							}
+						}
+						if((s-v)==0){
+							document.getElementById("s1").innerHTML="balanced";
+						}
+						else{
+							document.getElementById("s2").innerHTML="Not Balanced";
+						}
+					}
+				</script>
+				<div class="jumbotron">
+					<p> Balanced Parenthesis:</p>
+					<style>
+					#new{
+						height: 100px;
+						padding-top: 5px;
+						margin-top: 10px;
+						margin-bottom: 10px;}
+					</style>
+
+					<div id="new"><p> <input type="text" name="str" id="str"/>
+						<button class="btn btn-primary btn-md" onclick="balance()"> Check </button></p>
+						<p id="s1">  </p>
+						<p id="s2"> </p>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
 
 
 
