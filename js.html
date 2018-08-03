@@ -129,7 +129,7 @@
 	<div class="col-lg-6">
 		<h2>Audio player</h2>
 		<h4>Click here to hear a audio?</h4>
-		<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo2">click to review</button>
+		<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo2">Click to review</button>
 		<div id="demo2" class="collapse">
 
 		<div class="jumbotron">
@@ -162,9 +162,8 @@
 
 		<div class="jumbotron">
 			<p>Date  <input type="date" name="date" id="res">
-				<button class="btn btn-primary btn-lg" id="btn" onclick="day()">Submit</button>
+				<button class="btn btn-primary btn-md" id="btn" onclick="day()">Submit</button></p>
 				<p id="day1"></p>
-			</p>
 		</div>
 	</div>
 
@@ -220,23 +219,89 @@
 
 
 			<div class="jumbotron">
-				<p> NEXT PRIME NUMBER:</p>
+				<p> NEXT PRIME NUMBER:
 
-    <input id="inputnas"/>
-    <button class="btn btn-primary btn-sm" onclick="findprime()"> check </button>
+    <input placeholder="Enter Number" id="inputnas"/>
+    <button class="btn btn-primary btn-md" onclick="findprime()"> check </button></p>
     <p id="res1">  </p>
     <p id="res2"> </p>
 			</div>
 		</div>
 	</div>
+
+
+<!-- Assignment 6 -->
+
+<div class="col-lg-6">
+	<h2>Phone Nubmer Converter</h2>
+	<h4>Click to check the Phone Nubmer</h4>
+	<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo5">Click to review</button>
+	<div id="demo5" class="collapse">
+		<script>
+			window.onload= function(){
+
+				var input=document.getElementById("letter_1");
+				var button=document.getElementById("btn_1");
+				function convertPhoneLetters(input) {
+
+					var inputlength = input.length;
+					input = input.toLowerCase();
+					var phonenumber = "";
+					for (i = 0; i < inputlength; i++) {
+						var character = input.charAt(i);
+
+
+						switch(character){
+							case '0': phonenumber+="0";break;
+							case '1': phonenumber+="1";break;
+							case '2': phonenumber+="2";break;
+							case '3': phonenumber+="3";break;
+							case '4': phonenumber+="4";break;
+							case '5': phonenumber+="5";break;
+							case '6': phonenumber+="6";break;
+							case '7': phonenumber+="7";break;
+							case '8': phonenumber+="8";break;
+							case '9': phonenumber+="9";break;
+
+							case 'a': case 'b': case 'c': phonenumber+="2";break;
+							case 'd': case 'e': case 'f': phonenumber+="3";break;
+							case 'g': case 'h': case 'i': phonenumber+="4";break;
+							case 'j': case 'k': case 'l': phonenumber+="5";break;
+							case 'm': case 'n': case 'o': phonenumber+="6";break;
+							case 'p': case 'q': case 'r': case 's': phonenumber+="7";break;
+							case 't': case 'u': case 'v': phonenumber+="8";break;
+							case 'w': case 'x': case 'y': case 'z': phonenumber+="9";break;
+
+							default: phonenumber+=character;
+
+						}
+					}
+
+					document.getElementById("nash1").innerHTML = phonenumber;
+				}
+				button.onclick= function(){
+
+					convertPhoneLetters(input.value);
+				}
+			}
+		</script>
+
+
+		<div class="jumbotron">
+			<p> Phone Number Converter
+				<input type="text" placeholder="Enter String" id="letter_1">
+				<button class="btn btn-primary btn-md" id="btn_1">submit</button><p id="nash1"></p>
+			</p>
+		</div>
+	</div>
+
+	</div>
 </div>
-</div>
 
 
 
 
-
- <!-- Footer -->
+ <!-- Footer Design-->
 <hr>
     <style type="text/css">
       hr{
@@ -252,7 +317,7 @@
     <footer class="footer-copyright text-center py-3">
      <!-- Copyright -->
      <div class="footer-copyright text-center py-3">© 2018 Copyright:
-      <a href="https://www.linkedin.com/in/naresh-kumar-bn/"> Naresh Kumar</a>
+      <a href="https://www.linkedin.com/in/naresh-kumar-bn/" target="_blank"> Naresh Kumar</a>
     </div>
     <!-- Copyright -->
 

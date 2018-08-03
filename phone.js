@@ -1,6 +1,6 @@
 window.onload= function(){
 
-	var input=document.getElementById("letter");
+var input=document.getElementById("letter");
 var button=document.getElementById("btn");
 function convertPhoneLetters(input) {
 
@@ -37,7 +37,7 @@ default: phonenumber+=character;
    }
 }
 
-alert(phonenumber);
+document.getElementById("nash").innerHTML = phonenumber;
 }
 button.onclick= function(){
 
