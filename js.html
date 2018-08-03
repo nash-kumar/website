@@ -13,13 +13,14 @@
 <div class="container">
 <div class="jumbotron" id="top">
 	<h1>Assignments</h1>
-	<p>by Smitha & Naresh</p>
+	<p>By Smitha</p>
 	<style type="text/css">
 	#top{
 		height: 170px;
 		padding-top: 5px;
 		margin-top: 10px;
 		margin-bottom: 10px;
+		background-color: powderblue;
 	}
 </style> 
 </div>
@@ -46,16 +47,14 @@
 <div class="row">
 	<div class="col-lg-6">
 		<h2>Reversing  Number</h2>
-		<h4>Click here to check reverse of a number?</h4>
+		<h4>Click to check reverse of a number?</h4>
 		<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Click to review</button>
 		<div id="demo" class="collapse">
 			<script>
 				function reverse1()
 				{
 					var rev,num,b,temp=0;
-
 					num=Number(document.getElementById("input1").value);
-
 					no=num;
 					while(no>0)
 					{
@@ -88,14 +87,11 @@
 							function nonRep(){
 								var output = document.getElementById("output");
 								var text = document.getElementById("text").value;
-
 								var s = text.split("");
 								var counter = 0;
 								var result = '';
-
 								for(var i = 0; i < s.length; i++){
 									counter = 0;
-
 									for(var j = 0; j < s.length; j++){
 										if(s[i] === s[j]){
 											counter += 1;
@@ -108,12 +104,11 @@
 								}
 								output.innerHTML = result;
 							}     
-
 						</script>
 						<div class="jumbotron">
 							<p>Enter the string:</p>
 							<p>	<input type="text" id="text">
-								<button class="btn btn-primary btn-md" type="button" id="btn" onclick="nonRep()">Check</button></p>
+								<button class="btn btn-primary btn-md" type="button" id="btn" onclick="nonRep()">Submit</button></p>
 								<p id="output"></p>
 							</div>
 						</div>
@@ -129,7 +124,7 @@
 	<div class="col-lg-6">
 		<h2>Audio player</h2>
 		<h4>Click here to hear a audio?</h4>
-		<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo2">click to review</button>
+		<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo2">Click to review</button>
 		<div id="demo2" class="collapse">
 
 		<div class="jumbotron">
@@ -146,7 +141,7 @@
 	<!-- Assignment 4 -->
 	<div class="col-lg-6">
 	<h2>Day of a Week</h2>
-	<h4>Click here to check the day of a week</h4>
+	<h4>Click to check the day of a week</h4>
 	<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo3">Click to review</button>
 	<div id="demo3" class="collapse">
 		<script>
@@ -162,9 +157,8 @@
 
 		<div class="jumbotron">
 			<p>Date  <input type="date" name="date" id="res">
-				<button class="btn btn-primary btn-md" id="btn" onclick="day()">Submit</button>
+				<button class="btn btn-primary btn-md" id="btn" onclick="day()">Submit</button></p>
 				<p id="day1"></p>
-			</p>
 		</div>
 	</div>
 
@@ -178,21 +172,19 @@
 		<h4>Click here to find the prime numbers</h4>
 		<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo4">Click to review</button>
 		<div id="demo4" class="collapse">
-
 			<script>
 				function findprime()
     {
       
       var inp=document.getElementById("inputnas").value;
-      document.getElementById("res1").innerHTML="Previous prime number is " + prevprime(inp);
-      document.getElementById("res2").innerHTML="Next prime number is " + nextprime(inp);
+      document.getElementById("res1").innerHTML="prev prime is"+prevprime(inp);
+      document.getElementById("res2").innerHTML="next prime is"+nextprime(inp);
       //document.getElementById("res1").innerHTML="hello aslo";
       function prevprime(inp)
       {
         var temp=inp-1;
         for(var i=2;i<=temp/2;i++){
           if(temp%i==0){
-
             temp--;
           i=2;
           }  
@@ -221,82 +213,80 @@
 
 
 			<div class="jumbotron">
-				<p> NEXT PRIME NUMBER:</p>
-			<style>
-				#new{
-		height: 100px;
-		padding-top: 5px;
-		margin-top: 10px;
-		margin-bottom: 10px;}
-		</style>
+				<p> NEXT PRIME NUMBER:
 
-   <div id="new"><p> <input id="inputnas"/>
-    <button class="btn btn-primary btn-md" onclick="findprime()"> Check </button></p>
+    <input placeholder="Enter Number" id="inputnas"/>
+    <button class="btn btn-primary btn-md" onclick="findprime()"> check </button></p>
     <p id="res1">  </p>
     <p id="res2"> </p>
-    
-	</div>
 			</div>
 		</div>
 	</div>
-</div>
-</div>
-<!-- Assigment 7 -->
-<div class="container">
-	<div class="row">
-		<div class="col-lg-6">
-			<h2>Balanced Parenthesis</h2>
-			<h4>Click here to check the balanced paranthesis</h4>
-			<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo7">Click to review</button>
-			<div id="demo7" class="collapse">
-				<script type="text/javascript">
-					function balance(){
-						var s=0,v=0,a;
-						var str=document.getElementById("str");
-						a = str.value;
-						for (var i=0;i<str.value.length;i++)
-						{
-							if(a.charAt(i) == "("){
-								++s;
-							}
-							else if(a.charAt(i) == ")"){
-								--v
-							}
-						}
-						if((s-v)==0){
-							document.getElementById("s1").innerHTML="balanced";
-						}
-						else{
-							document.getElementById("s2").innerHTML="Not Balanced";
+
+
+<!-- Assignment 6 -->
+
+<div class="col-lg-6">
+	<h2>Phone Nubmer Converter</h2>
+	<h4>Click to check the Phone Nubmer</h4>
+	<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo5">Click to review</button>
+	<div id="demo5" class="collapse">
+		<script>
+			window.onload= function(){
+				var input=document.getElementById("letter_1");
+				var button=document.getElementById("btn_1");
+				function convertPhoneLetters(input) {
+					var inputlength = input.length;
+					input = input.toLowerCase();
+					var phonenumber = "";
+					for (i = 0; i < inputlength; i++) {
+						var character = input.charAt(i);
+						switch(character){
+							case '0': phonenumber+="0";break;
+							case '1': phonenumber+="1";break;
+							case '2': phonenumber+="2";break;
+							case '3': phonenumber+="3";break;
+							case '4': phonenumber+="4";break;
+							case '5': phonenumber+="5";break;
+							case '6': phonenumber+="6";break;
+							case '7': phonenumber+="7";break;
+							case '8': phonenumber+="8";break;
+							case '9': phonenumber+="9";break;
+							case 'a': case 'b': case 'c': phonenumber+="2";break;
+							case 'd': case 'e': case 'f': phonenumber+="3";break;
+							case 'g': case 'h': case 'i': phonenumber+="4";break;
+							case 'j': case 'k': case 'l': phonenumber+="5";break;
+							case 'm': case 'n': case 'o': phonenumber+="6";break;
+							case 'p': case 'q': case 'r': case 's': phonenumber+="7";break;
+							case 't': case 'u': case 'v': phonenumber+="8";break;
+							case 'w': case 'x': case 'y': case 'z': phonenumber+="9";break;
+							default: phonenumber+=character;
 						}
 					}
-				</script>
-				<div class="jumbotron">
-					<p> Balanced Parenthesis:</p>
-					<style>
-					#new{
-						height: 100px;
-						padding-top: 5px;
-						margin-top: 10px;
-						margin-bottom: 10px;}
-					</style>
-
-					<div id="new"><p> <input type="text" name="str" id="str"/>
-						<button class="btn btn-primary btn-md" onclick="balance()"> Check </button></p>
-						<p id="s1">  </p>
-						<p id="s2"> </p>
+					document.getElementById("nash1").innerHTML = phonenumber;
+				}
+				button.onclick= function(){
+					convertPhoneLetters(input.value);
+				}
+			}
+		</script>
 
 
-					</div>
-				</div>
-			</div>
+		<div class="jumbotron">
+			<p> Phone Number Converter
+				<input type="text" placeholder="Enter String" id="letter_1">
+				<button class="btn btn-primary btn-md" id="btn_1">submit</button><p id="nash1"></p>
+			</p>
 		</div>
+	</div>
+
+	</div>
+</div>
 
 
 
 
-
- <!-- Footer -->
+ <!-- Footer Design-->
 <hr>
     <style type="text/css">
       hr{
@@ -312,7 +302,7 @@
     <footer class="footer-copyright text-center py-3">
      <!-- Copyright -->
      <div class="footer-copyright text-center py-3">© 2018 Copyright:
-      <a href="https://www.linkedin.com/in/naresh-kumar-bn/"> Naresh Kumar</a>
+      <a href=https://www.linkedin.com/in/smitha-r-260574162/ target="_blank">Smitha R</a>
     </div>
     <!-- Copyright -->
 
