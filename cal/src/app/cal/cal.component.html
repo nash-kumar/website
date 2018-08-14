@@ -1,0 +1,13 @@
+
+<input [{ngModel}]='num1' type="number" name= "num1" placeholder="enter first number"/>
+<input [{ngModel}]='num2' type="number" name= "num2" placeholder="enter second number"/>
+<br>
+<br>
+<button(click)='cal_add()'>Add +</button><br/>
+
+<button(click)='cal_sub()'>Sub -</button><br/>
+<button(click)='cal_mul()'>Mul *</button><br/>
+<button(click)='cal_div()'>div /</button><br/>
+<br>
+<br>
+<h1>{{result}}</h1>
